@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcilator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <input type="text" class="display" />
+        <input type="text" id="display" class="display" />
         <div class="buttons">
             <button class="operator" id="AC">AC</button>
             <button class="operator" id="DEL">DEL</button>
-            <button class="operator" id="%">%</button>
-            <button class="operator" id="/">/</button>
-            <button id="7">7</button>
-            <button id="8">8</button>
-            <button id="9">9</button>
-            <button class="operator" id="*">*</button>
-            <button id="4">4</button>
-            <button id="5">5</button>
-            <button id="6">6</button>
-            <button class="operator" id="-">-</button>
-            <button id="1">1</button>
-            <button id="2">2</button>
-            <button id="3">3</button>
-            <button class="operator" id="+">+</button>
-            <button id="0">0</button>
-            <button id="00">00</button>
+            <button class="operator" onclick="operator(percentage)" value="%" id="%">%</button>
+            <button class="operator" onclick="operator(divide)" value="/" id="/">/</button>
+            <button onclick="number(7)" id="7">7</button>
+            <button onclick="number(8)" id="8">8</button>
+            <button onclick="number(9)" id="9">9</button>
+            <button class="operator" onclick="operator(multiply)" value="*" id="*">*</button>
+            <button onclick="number(4)" id="4">4</button>
+            <button onclick="number(5)" id="5">5</button>
+            <button onclick="number(6)" id="6">6</button>
+            <button class="operator" onclick="operator(subtraction)" value="-" id="-">-</button>
+            <button onclick="number(1)" id="1">1</button>
+            <button onclick="number(2)" id="2">2</button>
+            <button onclick="number(3)" id="3">3</button>
+            <button class="operator" onclick="operator(addition)" value="+" id="+">+</button>
+            <button onclick="number(0)" id="0">0</button>
+            <button onclick="number(0)" id="00">00</button>
             <button id=".">.</button>
             <button class="operator" id="=">=</button>
         </div>
