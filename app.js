@@ -12,10 +12,12 @@ let display = document.getElementById("display")
 
 
 
+
 function number(num){
     display.value += num
+    let last = display.value[display.value.length - 1]
+    console.log(last);
 }
-function operator(sign){
- display.value += sign.value   
 
-}
+
+
