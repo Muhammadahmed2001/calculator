@@ -1,5 +1,3 @@
-let ac = document.getElementById("AC");
-let del = document.getElementById("DEL");
 let display = document.getElementById("display");
 function number(num) {
   let input = display.value;
@@ -14,7 +12,19 @@ function number(num) {
   }
 
   display.value = input;
+}
 
-  console.log(last);
-  console.log(newInput);
+function calculate() {
+  let result = eval(display.value);
+  display.value = "";
+  display.value = result;
+}
+
+function deleteAll() {
+  display.value = "";
+}
+
+function deleteLastNumber() {
+  let last = display.value.slice(0, -1);
+  display.value = last;
 }

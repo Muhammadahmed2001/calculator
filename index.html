@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/Calculator-icon.png">
 </head>
 
 <body>
 
     <div class="container">
-        <input type="text" id="display" class="display" />
+        <input type="text" placeholder="00" id="display" class="display" />
         <div class="buttons">
-            <button class="operator" id="AC">AC</button>
-            <button class="operator" id="DEL">DEL</button>
+            <button class="operator" onclick="deleteAll()" id="AC">AC</button>
+            <button class="operator" onclick="deleteLastNumber()" id="DEL">DEL</button>
             <button class="operator" onclick="number('%')" id="%">%</button>
             <button class="operator" onclick="number('/')" id="/">/</button>
             <button onclick="number('7')" id="7">7</button>
@@ -32,8 +33,8 @@
             <button class="operator" onclick="number('+')" id="+">+</button>
             <button onclick="number('0')" id="0">0</button>
             <button onclick="number('0')" id="00">00</button>
-            <button id=".">.</button>
-            <button class="operator" id="=">=</button>
+            <button onclick="number('.')" id=".">.</button>
+            <button class="operator" onclick="calculate()" id="=">=</button>
         </div>
     </div>
 
