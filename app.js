@@ -1,23 +1,20 @@
+let ac = document.getElementById("AC");
+let del = document.getElementById("DEL");
+let display = document.getElementById("display");
+function number(num) {
+  let input = display.value;
+  let oprater = ["+", "-", "%", "/", "*"];
+  let last = input[input.length - 1];
+  let newInput = num;
 
+  if (oprater.indexOf(last) !== -1 && oprater.indexOf(newInput) !== -1) {
+    input = input.slice(0, -1) + newInput;
+  } else {
+    input += newInput;
+  }
 
+  display.value = input;
 
-let ac = document.getElementById("AC")
-let del = document.getElementById("DEL")
-let percentage = document.getElementById("%")
-let divide = document.getElementById("/")
-let multiply = document.getElementById("*")
-let addition = document.getElementById("+")
-let subtraction = document.getElementById("-")
-let display = document.getElementById("display")
-
-
-
-
-function number(num){
-    display.value += num
-    let last = display.value[display.value.length - 1]
-    console.log(last);
+  console.log(last);
+  console.log(newInput);
 }
-
-
-
